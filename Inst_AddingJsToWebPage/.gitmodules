@@ -1,0 +1,3 @@
+[submodule "Vanilla"]
+	path = Vanilla
+	url = https://github.com/moovinzoo/Vanilla.git

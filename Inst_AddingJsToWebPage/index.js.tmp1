@@ -1,0 +1,10 @@
+const title = document.getElementById("title");
+
+// function handleResize() {
+//     console.log("I have been resized");
+// }
+function handleClick() {
+    title.style.color = "random";
+}
+// window.addEventListener("resize", handleResize);
+title.addEventListener("click", handleClick);

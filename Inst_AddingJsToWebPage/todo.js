@@ -1,13 +1,25 @@
 const form_todo = document.querySelector(".js-todo-form")
-,   text_form_todo = form_todo.querySelector("input")
+,   text_todo = form_todo.querySelector("input")
 ,   list_todo = document.querySelector(".js-todoList");
 
 const TODOS_LS = "todoList";
 
+function showTodos(todoList) {
+    console.log(todoList);
+}
+
+function addTodo(newTodo) {
+}
+
 function loadTodos() {
     const todoList = localStorage.getItem(TODOS_LS);
+
     if (todoList !== null) {
-        
+        showTodos(todoList);
+    }
+
+    if (text_todo.value !== null) {
+        addTodo(text_todo.value);
     }
 }
 

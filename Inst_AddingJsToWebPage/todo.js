@@ -1,7 +1,21 @@
 const form_todo = document.querySelector(".js-todo-form")
-,   text_todo = form_todo.querySelector
-,   
+,   text_form_todo = form_todo.querySelector("input")
+,   list_todo = document.querySelector(".js-todoList");
 
+const TODOS_LS = "todoList";
+
+function loadTodos() {
+    const todoList = localStorage.getItem(TODOS_LS);
+    if (todoList !== null) {
+        
+    }
+}
+
+function init() {
+    loadTodos();
+}
+
+init();
 
 
 

@@ -1,11 +1,6 @@
-const form_todo = document.querySelector(".js-")
-
-
-
-
-
-
-
+const form_todo = document.querySelector(".js-todo-form")
+,   text_todo = form_todo.querySelector
+,   
 
 
 // const form_todo = document.querySelector(".js-toDoForm");

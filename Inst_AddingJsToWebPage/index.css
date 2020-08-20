@@ -17,8 +17,8 @@ h1 {
     color: #7f8c8d;
 }
 
-.form,
-.greetings {
+.greetings-form,
+.greetings-text {
     display: none;
 }
 

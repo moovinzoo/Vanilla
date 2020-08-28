@@ -1,30 +1,39 @@
-const form_todo = document.querySelector(".js-todo-form")
-,   text_todo = form_todo.querySelector("input")
-,   list_todo = document.querySelector(".js-todoList");
+const form_todo = document.querySelector(".js-todo-form"),
+    input_todo = form_todo.querySelector("input"),
+    list_todo = document.querySelector(".js-todo-list");
 
-const TODOS_LS = "todoList";
+const TODO_LIST_LS = "todoList";
 
-function showTodos(todoList) {
-    console.log(todoList);
+function paintNewTodo(newTodo) {
+
 }
 
-function addTodo(newTodo) {
+// TODO: 
+function saveNewTodo(newTodo) {
+    const todoList = localStorage.getItem(TODO_LIST_LS);
+    // todoList.
 }
 
-function loadTodos() {
-    const todoList = localStorage.getItem(TODOS_LS);
+// TODO: 
+function handleTodoSubmit(event) {
+    event.preventDefault();
+    const currentValue = input_todo.value;
+    paintNewTodo(currentValue);
+    saveNewTodo(input_todo.value);
+    input_todo.vaule = "";
+}
 
+function loadTodoList() {
+    const todoList = localStorage.getItem(TODO_LIST_LS);
     if (todoList !== null) {
-        showTodos(todoList);
+        // showTodoList(todoList);
     }
-
-    if (text_todo.value !== null) {
-        addTodo(text_todo.value);
-    }
+    // askForTodo(todoList);
 }
 
 function init() {
-    loadTodos();
+    loadTodoList();
+    form_todo.addEventListener("submit", handleTodoSubmit);
 }
 
 init();

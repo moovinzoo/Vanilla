@@ -4,14 +4,17 @@ const form_todo = document.querySelector(".js-todo-form"),
 
 const TODO_LIST_LS = "todoList";
 
+const toDos = []; // make todo list into empty array in the first beginning.
+
 function paintNewTodo(newTodo) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
-    delBtn.innerText = "❌";
     const span = document.createElement("span");
+    delBtn.innerText = "❌";
     span.innerText = newTodo;
     li.appendChild(delBtn);
     li.appendChild(span);
+    li.id = toDos.length + 1;
     list_todo.appendChild(li);
 }
 
